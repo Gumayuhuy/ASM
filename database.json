@@ -1,0 +1,197 @@
+{
+  "news": [
+    {
+      "id": "1",
+      "title": "Cu Chi Tunnels Luxury Tour - Morning or Afternoon",
+      "content": "Hear stories of the American-Vietnam war as you discover the maze-like Cu Chi Tunnels, a 136-mile (220 kilometers) network of underground tunnels used by the Viet Cong soldiers.",
+      "date": "2024-03-26 15:00:00",
+      "author": "Long Huy",
+      "image": "Cu-Chi-Tunnels.jpg",
+      "views": 425,
+      "star": 0,
+      "vote": 0,
+      "like": 5,
+      "haha": 4,
+      "dislike": 4
+    },
+    {
+      "id": "2",
+      "title": "Ha Long Bay Cruise Day Tour - best selling: Kayaking, Swimming, hiking & Lunch",
+      "content": "Come ready to party on this fun-filled Halong Bay boat tour. Departing Hanoi's old quarter early, you’ll get a full day out on the water amongst the thousands of islands that dot the sea in this unique landscape. Enjoy kayaking through tunnels and swimming at the beach",
+      "date": "2024-03-24 13:00:00",
+      "author": "Kuro",
+      "image": "halong.jpg",
+      "views": 2,
+      "star": 0,
+      "vote": 0,
+      "like": 0,
+      "haha": 0,
+      "dislike": 0
+    },
+    {
+      "id": "3",
+      "title": "Ba Na Hills with Golden Bridge Private Tour",
+      "content": "Get away from the crowds and see the best of Ba Na Hills on this private tour. After pickup from your hotel, you’ll ride the famous cable car, wander across the famous Golden Bridge, explore Linh Ung Pagoda, Loc Uyen Garden, and Quan Am Pavilion, and feast on an authentic Vietnamese buffet. With your English-speaking guide leading the way",
+      "date": "2024-03-22 17:00:00",
+      "author": "PD",
+      "image": "daNang.jpg",
+      "views": 0,
+      "star": 0,
+      "vote": 0,
+      "like": 0,
+      "haha": 0,
+      "dislike": 0
+    },
+    {
+      "id": "4",
+      "title": "Ba Na Hills with Golden Bridge Private Tour",
+      "content": "Get away from the crowds and see the best of Ba Na Hills on this private tour. After pickup from your hotel, you’ll ride the famous cable car, wander across the famous Golden Bridge, explore Linh Ung Pagoda, Loc Uyen Garden, and Quan Am Pavilion, and feast on an authentic Vietnamese buffet. With your English-speaking guide leading the way, you’ll get so much out of this full-day adventure.",
+      "date": "2024-03-22 17:00:00",
+      "author": "PD",
+      "image": "daNang.jpg",
+      "views": 0,
+      "star": 0,
+      "vote": 0,
+      "like": 0,
+      "haha": 0,
+      "dislike": 0
+    },
+    {
+      "id": "5",
+      "title": "Ba Na Hills with Golden Bridge Private Tour",
+      "content": "Get away from the crowds and see the best of Ba Na Hills on this private tour. After pickup from your hotel, you’ll ride the famous cable car, wander across the famous Golden Bridge, explore Linh Ung Pagoda, Loc Uyen Garden, and Quan Am Pavilion, and feast on an authentic Vietnamese buffet. With your English-speaking guide leading the way, you’ll get so much out of this full-day adventure.",
+      "date": "2024-03-22 17:00:00",
+      "author": "PD",
+      "image": "daNang.jpg",
+      "views": 0,
+      "star": 0,
+      "vote": 0,
+      "like": 0,
+      "haha": 0,
+      "dislike": 0
+    },
+    {
+      "id": "6",
+      "title": "Ba Na Hills with Golden Bridge Private Tour",
+      "content": "Get away from the crowds and see the best of Ba Na Hills on this private tour. After pickup from your hotel, you’ll ride the famous cable car, wander across the famous Golden Bridge, explore Linh Ung Pagoda, Loc Uyen Garden, and Quan Am Pavilion, and feast on an authentic Vietnamese buffet. With your English-speaking guide leading the way, you’ll get so much out of this full-day adventure.",
+      "date": "2024-03-22 17:00:00",
+      "author": "PD",
+      "image": "daNang.jpg",
+      "views": 0,
+      "star": 0,
+      "vote": 0,
+      "like": 0,
+      "haha": 0,
+      "dislike": 0
+    }
+  ],
+  "products": [
+    {
+      "id": "1",
+      "name": "Móc khóa",
+      "image": "moc-khoa.jpg",
+      "price": 50000
+    },
+    {
+      "id": "2",
+      "name": "Thạch Nhũ",
+      "image": "thach-nhu.jpg",
+      "price": 5000000
+    },
+    {
+      "id": "3",
+      "name": "Nón lá",
+      "image": "non-la.jpg",
+      "price": 150000
+    }
+  ],
+  "comments": [
+    {
+      "id": "5596",
+      "idNews": "1",
+      "content": "Luân muốn lói nà",
+      "name": "Vũ Luân Ngô Zăng",
+      "idUser": "2",
+      "date": "2024-04-02T10:08:03.212Z"
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "name": "Lê Long Huy",
+      "email": "huyllps29427@fpt.edu.vn",
+      "password": "123"
+    }
+  ],
+  "orders": [
+    {},
+    {
+      "id": "8fce",
+      "name": "Lê Long Huy",
+      "phone": "0986858517",
+      "address": "331/56 Phan Huy Ích",
+      "products": [],
+      "total": 0,
+      "date": "2024-04-04 15:52:06"
+    },
+    {
+      "id": "fd57",
+      "products": [
+        {
+          "id": "1",
+          "name": "Móc khóa",
+          "image": "moc-khoa.jpg",
+          "price": 50000,
+          "quantity": 1
+        },
+        {
+          "id": "2",
+          "name": "Thạch Nhũ",
+          "image": "thach-nhu.jpg",
+          "price": 5000000,
+          "quantity": 1
+        },
+        {
+          "id": "3",
+          "name": "Nón lá",
+          "image": "non-la.jpg",
+          "price": 150000,
+          "quantity": 1
+        }
+      ],
+      "total": 5200000,
+      "date": "2024-04-04 15:54:33"
+    },
+    {
+      "id": "2fa6",
+      "name": "Lê Long Huy",
+      "phone": "0986858517",
+      "address": "331 Phan Huy Ích",
+      "products": [
+        {
+          "id": "1",
+          "name": "Móc khóa",
+          "image": "moc-khoa.jpg",
+          "price": 50000,
+          "quantity": 3
+        },
+        {
+          "id": "2",
+          "name": "Thạch Nhũ",
+          "image": "thach-nhu.jpg",
+          "price": 5000000,
+          "quantity": 3
+        },
+        {
+          "id": "3",
+          "name": "Nón lá",
+          "image": "non-la.jpg",
+          "price": 150000,
+          "quantity": 3
+        }
+      ],
+      "total": 15600000,
+      "date": "2024-04-04 15:55:05"
+    }
+  ]
+}

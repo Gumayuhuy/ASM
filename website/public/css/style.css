@@ -1,0 +1,29 @@
+.show-hover{
+    display: none;
+}
+.hover-trigger:hover .show-hover{
+    display: block;
+}
+.badge-top{
+    width: 50px;
+    position: absolute;
+    top: 0;
+    left: 20px;
+    background: #C81E3A;
+    color: #FFF;
+    font-weight: 900;
+    text-align: center;
+    padding: 13px 0;
+    border-radius: 5px 5px 0 0;
+}
+.badge-top::after{
+    content: "";
+    display: block;
+    border-width: 0px 25px 15px;
+    border-color: #ffff0000 #C81E3A;
+    border-style: solid;
+    bottom: -13px;
+    left: 0;
+    position: absolute;
+    width: 50px;
+}

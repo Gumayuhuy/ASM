@@ -1,0 +1,138 @@
+<div class="container py-3">
+  <div class="row">
+    <div class="col-md-9">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb fs-6">
+          <li class="breadcrumb-item">
+            <a class="text-decoration-none text-success" href="#">Home</a>
+          </li>
+          <li class="breadcrumb-item">
+            <a class="text-decoration-none text-success" href="#">Blog</a>
+          </li>
+          <li class="breadcrumb-item text-success">
+            HCM City
+          </li>
+        </ol>
+      </nav>
+      <h3>{{tintuc.title}}</h3>
+      <p>Go beyond the phở</p>
+      <hr width="300px" class="border-3 opacity-100 text-success">
+      {{ Date(tintuc.date) | date:"HH:mm dd/MM/yyyy"}} &bull; By {{tintuc.author}} &bull; <i
+        class="fa-solid fa-eye fa-sm"></i> {{tintuc.views | number:0}}
+      <br>
+      {{tintuc.content}}
+      <h5>Có thể bạn cũng thích</h5>
+      <div class="row">
+        <div class="col-md-4 col-sm-6" ng-repeat="tt in tintuc">
+          <div class="card border-0 shadow">
+            <img
+              ng-src="public/img/{{tintuc.image}}"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">{{tt.title}}</h5>
+              <p class="card-text">{{tt.content}}</p>
+              <div>
+                <img
+                  src="public/img/2d.jpg"
+                  alt=""
+                  style="width: 40px"
+                  class="rounded-circle"
+                />
+                {{tt.author}}
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="col-md-4 col-sm-6">
+          <div class="card border-0 shadow">
+            <img src="public/img/{{tintuc.image}}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">{{tintuc.title}}</h5>
+              <p class="card-text">{{tintuc.content}}</p>
+              <div>
+                <img src="public/img/2d.jpg" alt="" style="width: 40px;" class="rounded-circle"> {{tintuc.author}}
+              </div>
+              <div>
+                <img src="public/img/" alt="" style="width: 50px;" class="rounded-circle">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6">
+          <div class="card border-0 shadow">
+            <img src="public/img/{{tintuc.image}}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">{{tintuc.title}}</h5>
+              <p class="card-text">{{tintuc.content}}</p>
+              <div>
+                <img src="public/img/2d.jpg" alt="" style="width: 40px;" class="rounded-circle"> {{tintuc.author}}
+              </div>
+              <div>
+                <img src="public/img/" alt="" style="width: 50px;" class="rounded-circle">
+              </div>
+            </div>
+          </div>
+        </div> -->
+      </div>
+      <div>
+        <h5 class="mt-5" id="comment">Comments</h5>
+        <form ng-submit="comment()" action="" class="my-3">
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Bạn đang nghĩ gì" ng-model="content">
+            <div class="input-group-text">
+              <button class="btn btn-success" type="submit">Gửi</button>
+            </div>
+          </div>
+        </form>
+        <div ng-repeat="bl in dsBL | orderBy:'-date' | limitTo:limit" class="card mb-3 border-0">
+          <div class="row g-0">
+            <div class="col-auto">
+              <img src="public/img/2d.jpg" width="60px" class="img-fluid rounded" alt="...">
+            </div>
+            <div class="col-auto">
+              <div class="card-body pt-0">
+                <h5 class="card-title">{{bl.name}}</h5>
+                <p class="card-text">{{bl.content}}</p>
+                <p class="card-text"><small class="text-body-secondary">{{ Date(bl.date) | date:'yyyy-MM-dd HH:mm:ss' }}</small>
+                  <button ng-if="bl.idUser==user.id" class="btn btn-outline-danger" ng-click="deleteComment(bl.id)">
+                    Delete
+                  </button>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div ng-hide="limit >= dsBL.length" class="text-center">
+          <button class="btn btn-outline-success" ng-click="limit = limit + 5">Xem thêm</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="position-sticky " style="top: 70px;">
+        cảm xúc của bạn
+        <br>
+        <button class="btn btn-outline-success" ng-click="react('like')">
+          <i class="fa-solid fa-thumbs-up"></i> {{tintuc.like}}
+        </button>
+        <button class="btn btn-outline-danger" ng-click="react('haha')">
+          <i class="fa-solid fa-thumbs-down"></i> {{tintuc.haha}}
+        </button>
+        <button class="btn btn-outline-warning" ng-click="react('dislike')">
+          <i class="fa-solid fa-face-grin-squint"></i> {{tintuc.dislike}}
+        </button>
+        <br>
+        cảm nghĩ của bạn
+        <br>
+        <button class="btn btn-outline-success">
+          <i class="fa-solid fa-share"></i> share
+        </button>
+        <a href="#comment" button class="btn btn-outline-success">
+          <i class="fa-solid fa-comment"></i> comment
+        </a>
+      </div>
+
+    </div>
+  </div>
+</div>

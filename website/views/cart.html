@@ -1,0 +1,79 @@
+<!-- Tạo view giỏ hàng bằng table -->
+<div class="container">
+    <h1>Giỏ hàng</h1>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>STT</th>
+                <th>Sản phẩm</th>
+                <th>Giá</th>
+                <th>Số lượng</th>
+                <th>Thành tiền</th>
+                <th>Xóa</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="sp in cart">
+                <td>{{$index + 1}}</td>
+                <td>{{sp.name}}</td>
+                <td>{{sp.price | number:0}}</td>
+                <td>
+                    <input type="number" name="" id="" class="form-control" style="width: 80px;" ng-model="sp.quantity"
+                        ng-change="saveCart()" min="1">
+                </td>
+                <td>{{sp.price * sp.quantity | number:0}}</td>
+                <td>
+                    <button class="btn btn-sm btn-outline-danger" ng-click="delete( $index )">
+                        Xóa
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th colspan="4">TỔNG THÀNH TIỀN: </th>
+                <th>{{tongTien() | number:0}}</th>
+                <th>
+                    <button class="btn btn-sm btn-outline-danger" ng-click="deleteAll()">
+                        Xóa hết
+                    </button>
+                </th>
+            </tr>
+        </tfoot>
+    </table>
+    <div class="text-end">
+        <div class="btn btn-outline-warning btn-lg" data-bs-toggle="modal" data-bs-target="#exampleModal">Đặt hàng</div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Thông tin khách hàng</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Họ tên: </label>
+                            <input type="text" class="form-control" id="name" ng-model="name">
+                        </div>
+                        <div class="mb-3">
+                            <label for="phone" class="form-label">SĐT: </label>
+                            <input type="text" class="form-control" id="phone" ng-model="phone">
+                        </div>
+                        <div class="mb-3">
+                            <label for="address" class="form-label">Địa chỉ: </label>
+                            <input type="text" class="form-control" id="address" ng-model="address">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
+                    <button ng-click="purchase()" type="button" class="btn btn-warning">Xác nhận</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,17 @@
+<div class="container py-5">
+    <h1>Login</h1>
+    <form ng-submit="login()">
+        <div ng-show="isError" class="alert alert-danger">
+            Fail to login (Wrong Email Or Password) !
+        </div>
+        <div class="mb-3">
+            <label for="email" class="form-label"> Email </label>
+            <input type="email" class="form-control" id="email" ng-model="email">
+        </div>
+        <div class="mb-3">
+            <label for="password" class="form-label"> Password </label>
+            <input type="password" class="form-control" id="password" ng-model="password">
+        </div>
+        <button type="submit" class="btn btn-success"> Login </button>
+    </form>
+</div>

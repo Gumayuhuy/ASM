@@ -1,0 +1,80 @@
+
+<div class="card text-bg-dark border-0 rounded-0">
+  <img src="public/img/banner.jpg" class="card-img object-fit-cover rounded-0" alt="..." style="height: 300px" />
+  <div class="card-img-overlay d-flex justify-content-center align-items-center bg-dark bg-opacity-25">
+    <div class="text-center">
+      <p class="card-text fs-3">Welcome to</p>
+      <h1 class="card-title display-3 fw-bolder">VIET NAM</h1>
+    </div>
+  </div>
+</div>
+
+<div class="bg-body-secondary">
+  <div class="container py-5">
+    <h3 class="mb-3">Điểm đến ấn tượng</h3>
+    <div class="row">
+
+      <div ng-repeat="tt in dsTT" class="col-md-4">
+        <div class="card shadow border-0 hover-trigger">
+          <div class="position-relative">
+            <div class="badge-top">#{{$index+1}}</div>
+            <img src="public/img/{{tt.image}}" class="card-img-top" alt="..."/>
+            <a href="#!news/{{tt.id}}" class="show-hover btn btn-light rounded-pill position-absolute end-0 bottom-0 mb-3 me-3">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              Details
+            </a>
+          </div>
+
+          <div class="card-body">
+            <h5 class="card-title">{{tt.title}}</h5>
+            <div class="text-warning mb-3 mt-4 d-flex align-items-center">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <span class="text-dark ms-2">{{tt.views}}</span>
+            </div>
+            <p class="card-text">
+              {{tt.content}}
+            </p>
+            <a href="" data-bs-toggle="modal" data-bs-target="#moreModal" ng-click="showTinTuc(tt)">[More]</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="bg-body-light">
+  <div class="container py-5">
+    <h3 class="mb-3">Quà lưu niệm</h3>
+    <div class="row">
+      <div ng-repeat="sp in dsSP" class="col-md-2">
+        <div class="card">
+          <img src="public/img/{{sp.image}}" class="card-img-top" alt="..." style="width: 165px; height: 165px;">
+          <div class="card-body">
+            <h5 class="card-title">{{sp.name}}</h5>
+            <p class="card-text">{{sp.price | number:0}} đ</p>
+            <button href="#" class="btn btn-success" ng-click="addToCart(sp)">Buy</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="moreModal" tabindex="-1" aria-labelledby="moreModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content p-3">
+      <div class="modal-header border-0">
+        <h1 class="modal-title fs-3" id="moreModalLabel">{{modal.title}}</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        {{modal.content}}
+      </div>
+    </div>
+  </div>
+</div>
